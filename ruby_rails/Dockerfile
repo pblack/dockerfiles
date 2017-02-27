@@ -7,11 +7,11 @@
 # Codenvy, S.A. - initial API and implementation
 
 FROM codenvy/ubuntu_jre
-ENV RAILS_VERSION 4.2.6
+ENV RAILS_VERSION 5.0.1
 ENV RUBY_MAJOR 2.3
-ENV RUBY_VERSION 2.3.0
-ENV RUBY_DOWNLOAD_SHA256 ba5ba60e5f1aa21b4ef8e9bf35b9ddb57286cb546aac4b5a28c71f459467e507
-ENV RUBYGEMS_VERSION 2.6.2
+ENV RUBY_VERSION 2.3.3
+ENV RUBY_DOWNLOAD_SHA256 241408c8c555b258846368830a06146e4849a1d58dcaf6b14a3b6a73058115b7
+ENV RUBYGEMS_VERSION 2.6.10
 
 USER root
 # skip installing gem documentation
@@ -52,7 +52,7 @@ RUN cd /usr/src/ruby \
     && sudo rm -r /usr/src/ruby
 
 
-ENV BUNDLER_VERSION 1.11.2
+ENV BUNDLER_VERSION 1.14.5
 
 RUN sudo gem install bundler --version "$BUNDLER_VERSION"
 
